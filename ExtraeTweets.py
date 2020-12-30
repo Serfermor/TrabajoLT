@@ -193,7 +193,7 @@ for i in range(len(Dates)):
             
             for j in range(aux2):
                 Media_Pol[k+j]=0
-                Media_Sub[k+j]=0
+                Media_Sub[k+j]=0.5
             
             aux=Dates[i].hour
             k = k+aux2
@@ -205,7 +205,8 @@ Media_Sub[k]=suma2/z
         
         
         
-#%% Creo los archivos Txt que contienen los tweets y las medidas realizadas sobre ellos
+#%%
+#Creo los archivos Txt que contienen los tweets y las medidas realizadas sobre ellos
 
 with open('{}.txt'.format(str(Fecha_tweets) + '_Tweets'),'w') as f:
     f.write('\nTweets sobre Covid Granada Fecha: ' + str(Fecha_tweets) + '\n\n\n')
@@ -228,4 +229,24 @@ with open('{}.txt'.format(str(Fecha_tweets) + '_Subjectivity'),'w') as f:
             + str(Fecha_tweets) + '\n\n\n')
     for item in Media_Sub:
         f.write("%s\n\n" % json.dumps(item))
-        
+
+
+#%%
+#Por último observo que ciertos caracteres como las tildes no se guardan correc-
+#tamente por lo que corrijo el archivo txt de tweets generado.
+
+with open('{}.txt'.format(str(Fecha_tweets)+ '_Tweets'),'r') as file :
+  filedata = file.read()
+
+# Replace the target strings
+filedata = filedata.replace('\\u00f1','ñ')
+filedata = filedata.replace('\\u00e1','á')
+filedata = filedata.replace('\\u00ed','í')
+filedata = filedata.replace('\\u00e9','é')
+filedata = filedata.replace('\\u00f3','ó')
+filedata = filedata.replace('\\u00fa','ú')
+filedata = filedata.replace('\\u30fc','_')
+
+# Write the file out again
+with open('{}.txt'.format(str(Fecha_tweets)+ '_Tweets'),'w') as file:
+  file.write(filedata)
