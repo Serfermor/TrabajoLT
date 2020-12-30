@@ -1,5 +1,5 @@
 
-Media de la polaridad de los tweets referentes al Covidcada 2 horas en Granada Fecha: 2020-12-24
+Media de la polaridad de los tweets referentes al Covid cada 2 horas en Granada Fecha: 2020-12-24
 
 
 -0.0363371212121212
