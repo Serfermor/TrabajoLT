@@ -1,0 +1,23 @@
+{% extends "layaout.html" %}
+
+
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-4">INICIO</h1>
+    <h1 class="texto-home">Bienvenidos!</h1>
+   <!-- <img src="..//static/img/portada.png" height="200">-->
+    <h2 class="texto-inicio">En esta pagina web mostraremos los datos obtenidos mediante la API
+        de Twitter ,con la que obtendremos una serie de tweets sobre un tema y en una localización determianda.
+        Además, se mostrarán los análisis y estimaciones mediante el uso de machine learning.
+    </h2>
+    <hr class="my-4">
+   
+    <a class="btn-primary btn-lg" href="#" role="button">Inicio</a>
+    <a class="btn-primary btn-lg" href="{{url_for('about')}}" role="button">Acerca de</a>
+    <a class="btn-primary btn-lg" href="{{url_for('resultados')}}" role="button">Resultados</a>
+    <a class="btn-primary btn-lg" href="{{url_for('contact')}}" role="button">Contacto</a>
+</div>
+
+{% endblock %}
+
+
