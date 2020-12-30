@@ -1,0 +1,103 @@
+
+body{
+    background-image: url("../img/portada.png");
+}
+
+.contenedor-servicios{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contenido-textos{
+    margin: 500;
+    margin-left:1em;
+    font: 90% serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: oblique;
+    font-size:normal;
+    text-align: left;
+    line-height: 100%;
+}
+
+.contenedor-info{
+    font: 100% sans-serif;
+    justify-content: space-evenly;
+    text-align: left;
+}
+
+
+.content-info{
+    margin-top: 2em;
+    font: 200% sans-serif;
+    justify-content: space-evenly;
+    text-align: left;
+}
+
+.display-4{
+    font-family: sans-serif;
+    font-size:xx-large;
+    font-style:normal;
+    font-weight:bolder;
+    color:#061e2e;
+    margin-bottom: 1em;
+
+
+}
+
+.titulo-final{
+    margin-top: 4em;
+}
+
+.contenedor-imagen-ugr {
+    position: relative;
+    top: -16px;
+    right: -706px;
+    text-align: left;
+}
+
+.titulo{
+    font-size:x-large;
+    margin-top: 1em;
+    color: #34495E;
+}
+
+.contenedor-contacto{
+    display: flex;
+}
+
+.contenido-textos-contacto{
+    margin: 500;
+    margin-left:1em;
+    font: 90% serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: oblique;
+    font-size:normal;
+    text-align: left;
+    line-height: 100%;
+}
+
+.texto-inicio{
+    margin: 500;
+    margin-left:1em;
+    font: 90% serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: oblique;
+    font-size:normal;
+    text-align: left;
+    line-height: 150%;
+
+    
+}
+
+.texto-home{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:xx-large;
+    font-style:normal;
+    margin-bottom: 1em;
+}
+
+.contenido-resultados{
+
+    font-style: oblique;
+    font:90% Verdana, Geneva, Tahoma, sans-serif;
+}
