@@ -7,13 +7,13 @@ from tweepy.streaming import StreamListener
 import pandas as pd
 import csv
 
-#provincia, coordenadas = next(entrada)  # Leer campos
-# print(provincia, coordenadas)  # Mostrar campos
+
 #Bibliotecas pagina web
-from flask import Flask, render_template, flash
+from flask import Flask
+from flask import render_template
 from flask import request
-from flask import Flask, redirect, url_for, request
-from wtforms import StringField, FieldList, FormField, SelectField
+
+
 
 
 CONSUMER_KEY="9OdHWr5K7HD6uF0zPDz0BRH40"
@@ -76,11 +76,9 @@ def resultados():
 @app.route('/busqueda', methods = ['POST', 'GET']) #creamos ruta para la pagina "resultados"
 def busqueda():
 
-        select = request.form.get('comp_select')
        
-       #return str(select) # just to see what select is
         tema_elegido=""
-        texto_prueba=""
+        sel_tweets=""
 
         if request.method == 'POST':
             nombre = request.form['nombre']
@@ -88,14 +86,13 @@ def busqueda():
             tema_elegido="Su búsqueda elegida es: " +nombre + " en " + Localizacion
 
             Localizacion = loadCoordenadasByCsv(Localizacion)
-            texto_prueba = loadtweets(nombre,Localizacion)
+            sel_tweets = loadtweets(nombre,Localizacion)
            
         else:              
-                txtfile=".//static/txt/info.txt"
-                f = open (txtfile,'wb')
-                f.close()
+            tema_elegido=""
+            sel_tweets=""
      
-        return render_template('busqueda.html',texto_prueba=texto_prueba,tema_elegido=tema_elegido) #Importamos archivo resultados.html
+        return render_template('busqueda.html',sel_tweets=sel_tweets,tema_elegido=tema_elegido) 
  
 if __name__ == '__main__': 
     app.run(debug=True) #nos permite ejecutar nuestra aplicacion
