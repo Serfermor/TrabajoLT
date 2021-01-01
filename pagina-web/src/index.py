@@ -69,8 +69,12 @@ def about():
 def contact():
     return render_template('contact.html') #Importamos archivo contact.html
 
-@app.route('/resultados', methods = ['POST', 'GET']) #creamos ruta para la pagina "resultados"
+@app.route('/resultados') #creamos ruta para la pagina "contacto"
 def resultados():
+    return render_template('resultados.html') #Importamos archivo contact.html
+
+@app.route('/busqueda', methods = ['POST', 'GET']) #creamos ruta para la pagina "resultados"
+def busqueda():
 
         select = request.form.get('comp_select')
        
@@ -91,7 +95,7 @@ def resultados():
                 f = open (txtfile,'wb')
                 f.close()
      
-        return render_template('resultados.html',texto_prueba=texto_prueba,tema_elegido=tema_elegido) #Importamos archivo resultados.html
+        return render_template('busqueda.html',texto_prueba=texto_prueba,tema_elegido=tema_elegido) #Importamos archivo resultados.html
  
 if __name__ == '__main__': 
     app.run(debug=True) #nos permite ejecutar nuestra aplicacion
