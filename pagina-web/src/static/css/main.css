@@ -6,6 +6,7 @@ body{
 .contenedor-servicios{
     display: flex;
     justify-content: space-evenly;
+    margin-top: 2em;
 }
 
 .contenido-textos{
@@ -97,7 +98,19 @@ body{
 }
 
 .contenido-resultados{
-
-    font-style: oblique;
-    font:90% Verdana, Geneva, Tahoma, sans-serif;
+    margin: 500;
+    margin-left:1em;
+    font: 90% serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-size:normal;
+    text-align: left;
+    line-height: 100%;
 }
+
+.contenedor-imagen-resultados {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
