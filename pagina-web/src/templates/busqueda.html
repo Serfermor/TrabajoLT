@@ -4,7 +4,7 @@
 
 <div class="jumbotron">
     <h1 class="display-4">BÚSQUEDA DE TWEETS </h1>
-    <h2 class="texto-inicio">En esta sección se permite realizar una búsqueda de Tweets según un tema y una localización elegida.
+    <h2 class="texto-inicio">En esta sección se permite realizar una búsqueda de Tweets según el tema y la provincia de España de elegida.
     </h2>
     <form action="{{url_for('busqueda')}}" method="POST">
         <p>Tema: <input type="text" name="nombre" value=""/></p>
@@ -18,7 +18,7 @@
 
     <td id="textoExterno">
         <div id="texto" style="white-space: pre-line;">
-            {{texto_prueba}}
+            {{sel_tweets}}
         </div>
     </td> 
         
