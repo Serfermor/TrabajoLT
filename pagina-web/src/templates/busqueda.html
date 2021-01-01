@@ -1,0 +1,27 @@
+{% extends "layaout.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1 class="display-4">BÚSQUEDA DE TWEETS </h1>
+    <h2 class="texto-inicio">En esta sección se permite realizar una búsqueda de Tweets según un tema y una localización elegida.
+    </h2>
+    <form action="{{url_for('busqueda')}}" method="POST">
+        <p>Tema: <input type="text" name="nombre" value=""/></p>
+        <p>Localizacion: <input type="text" name="Localizacion" value=""/></p>
+        <p><input type="submit" value="Buscar"/></p>
+        <div class="contenido-resultados">
+             <p><h3>{{tema_elegido}}</h3></p>
+        </div>
+   </form>
+    
+
+    <td id="textoExterno">
+        <div id="texto" style="white-space: pre-line;">
+            {{texto_prueba}}
+        </div>
+    </td> 
+        
+</div>
+
+{% endblock %}
