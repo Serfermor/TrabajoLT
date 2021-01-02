@@ -6,6 +6,7 @@ from tweepy import Stream
 from tweepy.streaming import StreamListener
 import pandas as pd
 import csv
+import traceback
 
 
 #Bibliotecas pagina web
@@ -40,18 +41,20 @@ def load_infoCSV(csvfile, nombre,Localizacion):
 def loadtweets(nombre, Localizacion):
     info = ""
     for tweet in tweepy.Cursor(api.search, q=nombre,geocode=Localizacion).items(10):
+        
         info+=  tweet.text + '\n\n'
     
     return info
 
 def loadCoordenadasByCsv(localizacion):
-    csvLocalizacion=".//static/txt/provincias2.csv"
+    csvLocalizacion="./static/txt/provincias2.csv"
     with open(csvLocalizacion, newline='') as csvfile:
         spamreader = csv.reader(csvfile, delimiter=' ', quotechar='|')
         for row in spamreader:
             x = row[0].split("|", 1)
             if localizacion == x[0]:
                 return(x[1])
+    return ''
 
 #-----Pagina web-------
 app = Flask(__name__) #Para confirmar que es el archivo que va a arrancar la aplicacion
@@ -76,10 +79,8 @@ def resultados():
 @app.route('/busqueda', methods = ['POST', 'GET']) #creamos ruta para la pagina "resultados"
 def busqueda():
 
-       
         tema_elegido=""
         sel_tweets=""
-
         if request.method == 'POST':
             nombre = request.form['nombre']
             Localizacion = request.form['Localizacion']
@@ -87,12 +88,19 @@ def busqueda():
 
             Localizacion = loadCoordenadasByCsv(Localizacion)
             sel_tweets = loadtweets(nombre,Localizacion)
+
+            if Localizacion == '':
+                sel_tweets = 'La localización no es correcta. Revisela por favor.'
            
         else:              
             tema_elegido=""
             sel_tweets=""
+    
      
         return render_template('busqueda.html',sel_tweets=sel_tweets,tema_elegido=tema_elegido) 
+   
+
+        
  
 if __name__ == '__main__': 
     app.run(debug=True) #nos permite ejecutar nuestra aplicacion
