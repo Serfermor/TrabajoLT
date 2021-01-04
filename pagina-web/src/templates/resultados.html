@@ -2,77 +2,136 @@
 
 {% block content %}
 
-<div class="jumbotron">
-    <h1 class="display-4">ANÁLISIS DE RESULTADOS</h1>
+    <div class="jumbotron">
+        <h1 class="display-4">ANÁLISIS DE RESULTADOS</h1>
 
-    <h2 class="texto-inicio">En esta sección se mostrarán los análisis y estimaciones obtenidos mediante el uso de machine learning.
-    </h2>
-    
-    <div class="contenedor-servicios">
-        <img src="..//static/img/LSTM_Plots/Polarity_DB.png" height="230" >
-        <div class="contenido-resultados">
-            <p>Explicacion sdkshfkdjsahfsakfhsakdfhsdksahfslfhsaldfhasflsaf
-                sdajfkhsdjfhskfhsakfhsakfhask
-            </p>
-        </div>
-    </div>
-    <div class="contenedor-servicios">
-        <img src="..//static/img/LSTM_Plots/Polarity_Forecast.png" height="230" >
-        <div class="contenido-resultados">
-                <p>Explicacion sdkshfkdjsahfsakfhsakdfhsdksahfslfhsaldfhasflsaf
-                    sdajfkhsdjfhskfhsakfhsakfhask</p>
-        </div>
-    </div>
-
-    <div class="contenedor-servicios">
-        <img src="..//static/img/LSTM_Plots/Polarity_Loss_F.png" height="230" >
-        <div class="contenido-resultados">
-                    <p>Explicacion sdkshfkdjsahfsakfhsakdfhsdksahfslfhsaldfhasflsaf
-                        sdajfkhsdjfhskfhsakfhsakfhask</p>
-        </div>
-    </div>
+        <h2 class="texto-inicio">En esta sección se mostrarán los análisis y estimaciones obtenidos mediante el uso de machine learning.
+        </h2>
         
-    <div class="contenedor-servicios">
-        <img src="..//static/img/LSTM_Plots/Polarity_Testing.png" height="230" >
-        <div class="contenido-resultados">
-                    <p>Explicacion sdkshfkdjsahfsakfhsakdfhsdksahfslfhsaldfhasflsaf
-                        sdajfkhsdjfhskfhsakfhsakfhask</p>
+        <div class="contenedor-servicios">
+            <img src="..//static/img/Subjectivity_img/Sub_23122020.png" height="200" >
+            <img src="..//static/img/Polarity_img/Polarity_23122020.png" height="200" >
+            <div class="contenido-resultados">
+                <a class="btn-primary btn-lg" href="{{url_for('tweets',fecha='2020-12-23')}}" role="button" id="2020-12-23">Tweets 23/12/2020</a>
+                <p>
+                </p>
+            </div>
+        </div>
+        <div class="contenedor-servicios">
+            <img src="..//static/img/Subjectivity_img/Sub_24122020.png" height="200" >
+            <img src="..//static/img/Polarity_img/Polarity_24122020.png" height="200" >
+            <div class="contenido-resultados">
+                <a class="btn-primary btn-lg" href="{{url_for('tweets',fecha='2020-12-24')}}" role="button" id="2020-12-24">Tweets 24/12/2020</a>
+                <p></p>
+            </div>
+        </div>
+
+        <div class="contenedor-servicios">
+            <img src="..//static/img/Subjectivity_img/Sub_25122020.png" height="200" >
+            <img src="..//static/img/Polarity_img/Polarity_25122020.png" height="200" >
+            <div class="contenido-resultados">
+                <a class="btn-primary btn-lg" href="{{url_for('tweets',fecha='2020-12-25')}}" role="button" id="2020-12-25">Tweets 25/12/2020</a>
+                <p></p>
+            </div>
+        </div>
+            
+        <div class="contenedor-servicios">
+            <img src="..//static/img/Subjectivity_img/Sub_26122020.png" height="200" >
+            <img src="..//static/img/Polarity_img/Polarity_26122020.png" height="200" >
+            <div class="contenido-resultados">
+                <a class="btn-primary btn-lg" href="{{url_for('tweets',fecha='2020-12-26')}}" role="button" id="2020-12-26">Tweets 26/12/2020</a>
+                <p></p>
+            </div>
+        </div>
+
+        <div class="contenedor-servicios">
+            <img src="..//static/img/Subjectivity_img/Sub_27122020.png" height="200" >
+            <img src="..//static/img/Polarity_img/Polarity_27122020.png" height="200" >
+            <div class="contenido-resultados">
+                <a class="btn-primary btn-lg" href="{{url_for('tweets',fecha='2020-12-27')}}" role="button" id="2020-12-27">Tweets 27/12/2020</a>
+                <p></p>
+            </div>
+        </div>
+        
+
+        <div class="contenedor-servicios">
+            <img src="..//static/img/Subjectivity_img/Sub_28122020.png" height="200" >
+            <img src="..//static/img/Polarity_img/Polarity_28122020.png" height="200" >
+            <div class="contenido-resultados">
+                <a class="btn-primary btn-lg" href="{{url_for('tweets',fecha='2020-12-28')}}" role="button" id="2020-12-28">Tweets 28/12/2020</a>
+                <p></p>
+            </div>
+        </div>
+
+
+        <div class="contenedor-servicios">
+            <img src="..//static/img/Subjectivity_img/Sub_29122020.png" height="200" >
+            <img src="..//static/img/Polarity_img/Polarity_29122020.png" height="200" >
+            <div class="contenido-resultados">
+                <a class="btn-primary btn-lg" href="{{url_for('tweets',fecha='2020-12-29')}}" role="button" id="2020-12-29">Tweets 29/12/2020</a>
+                <p></p>
+            </div>
+        </div>
+
+
+        <div class="contenedor-servicios">
+            <img src="..//static/img/Subjectivity_img/Sub_30122020.png" height="200" >
+            <img src="..//static/img/Polarity_img/Polarity_30122020.png" height="200" >
+            <div class="contenido-resultados">
+                <a class="btn-primary btn-lg" href="{{url_for('tweets',fecha='2020-12-30')}}" role="button" id="2020-12-30">Tweets 30/12/2020</a>
+                <p></p>
+            </div>
+        </div>
+
+        <div class="contenedor-servicios">
+            <img src="..//static/img/Subjectivity_img/Sub_31122020.png" height="200" >
+            <img src="..//static/img/Polarity_img/Polarity_31122020.png" height="200" >
+            <div class="contenido-resultados">
+                <a class="btn-primary btn-lg" href="{{url_for('tweets',fecha='2020-12-31')}}" role="button" id="2020-12-31">Tweets 31/12/2020</a>
+                <p></p>
+            </div>
+        </div>
+
+        <div class="contenedor-servicios">
+            <img src="..//static/img/Subjectivity_img/Sub_01012020.png" height="200" >
+            <img src="..//static/img/Polarity_img/Polarity_01012021.png" height="200" >
+            <div class="contenido-resultados">
+                <a class="btn-primary btn-lg" href="{{url_for('tweets',fecha='2021-01-01')}}" role="button" id="2021-01-01">Tweets 01/01/2021</a>
+                <p></p>
+            </div>
+        </div>
+
+        <div class="contenedor-servicios">
+            <img src="..//static/img/Subjectivity_img/Sub_02012020.png" height="200" >
+            <img src="..//static/img/Polarity_img/Polarity_02012021.png" height="200" >
+            <div class="contenido-resultados">
+                <a class="btn-primary btn-lg" href="{{url_for('tweets',fecha='2021-01-02')}}" role="button" id="2021-01-02">Tweets 02/01/2021</a>
+                <p></p>
+            </div>
+        </div>
+
+        <div class="contenedor-servicios">
+            <img src="..//static/img/LSTM_Plots/Polarity_DB.png" height="200" >
+            <div class="contenido-resultados">
+                
+                <p>Explicación</p>
+            </div>
+        </div>
+
+        <div class="contenedor-servicios">
+            <img src="..//static/img/LSTM_Plots/Polarity_DB.png" height="200" >
+            <div class="contenido-resultados">
+                
+                <p>Explicación</p>
+            </div>
+        </div>
+
+        <div class="contenedor-servicios">
+            <img src="..//static/img/LSTM_Plots/Polarity_DB.png" height="200" >
+            <div class="contenido-resultados">
+                
+                <p>Explicación</p>
+            </div>
         </div>
     </div>
-
-    <div class="contenedor-servicios">
-        <img src="..//static/img/LSTM_Plots/Subjectivity_DB.png" height="230 " >
-        <div class="contenido-resultados">
-                     <p>Explicacion sdkshfkdjsahfsakfhsakdfhsdksahfslfhsaldfhasflsaf
-                        sdajfkhsdjfhskfhsakfhsakfhask</p>
-        </div>
-    </div>
-      
-
-    <div class="contenedor-servicios">
-        <img src="..//static/img/LSTM_Plots/Subjectivity_Forecast.png" height="230" >
-        <div class="contenido-resultados">
-                     <p>Explicacion sdkshfkdjsahfsakfhsakdfhsdksahfslfhsaldfhasflsaf
-                        sdajfkhsdjfhskfhsakfhsakfhask</p>
-        </div>
-    </div>
-
-
-    <div class="contenedor-servicios">
-        <img src="..//static/img/LSTM_Plots/Subjectivity_Loss_F.png" height="230" >
-        <div class="contenido-resultados">
-                     <p>Explicacion sdkshfkdjsahfsakfhsakdfhsdksahfslfhsaldfhasflsaf
-                        sdajfkhsdjfhskfhsakfhsakfhask</p>
-        </div>
-    </div>
-
-
-    <div class="contenedor-servicios">
-        <img src="..//static/img/LSTM_Plots/Subjectivity_Testing.png" height="230" >
-        <div class="contenido-resultados">
-                     <p>Explicacion sdkshfkdjsahfsakfhsakdfhsdksahfslfhsaldfhasflsaf
-                        sdajfkhsdjfhskfhsakfhsakfhask</p>
-        </div>
-    </div>
-</div>
 {% endblock %}
