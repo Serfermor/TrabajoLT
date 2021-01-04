@@ -72,7 +72,7 @@ def about():
 def contact():
     return render_template('contact.html') #Importamos archivo contact.html
 
-@app.route('/resultados') #creamos ruta para la pagina "contacto"
+@app.route('/resultados', methods = ['POST', 'GET']) #creamos ruta para la pagina "contacto"
 def resultados():
     return render_template('resultados.html') #Importamos archivo contact.html
 
@@ -100,7 +100,10 @@ def busqueda():
         return render_template('busqueda.html',sel_tweets=sel_tweets,tema_elegido=tema_elegido) 
    
 
-        
+@app.route('/tweets') #creamos ruta para la pagina "contacto"
+def tweets():
+    id = request.args.get('fecha')
+    return render_template('tweets.html', fecha_fichero=id) #Importamos archivo contact.html       
  
 if __name__ == '__main__': 
     app.run(debug=True) #nos permite ejecutar nuestra aplicacion
