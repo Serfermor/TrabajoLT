@@ -13,3 +13,4 @@ Datetime
 Re
 Google_trans_new (versión de github usuario "lushan88a" de google_trans)
 TextBlob
+Flask
