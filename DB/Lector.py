@@ -7,9 +7,8 @@ SCRIPT para tomar los datos de los .txt
 
 @author: serfe
 """
-import json 
+
 from datetime import date
-import string
 import Funciones
 
 #############################################################################
