@@ -32,17 +32,19 @@ from datetime import date
 
 Fecha = date.today()    #Tomamos la fecha de hoy
 
-Dia = 29            #Tener en cuenta al elegir los valores que solo 7 días atrás
-Mes = 12
-Año = 2020
+Dia = 2            #Tener en cuenta al elegir los valores que solo 7 días atrás
+Mes = 1
+Año = 2021
 
 Fecha_peticiones = Fecha # Obtenemos la fecha de la que obtendremos los tweets
-Fecha_peticiones = Fecha_peticiones.replace(day = Dia + 1)
+Fecha_peticiones = Fecha_peticiones.replace(day = Dia+1)
 Fecha_peticiones = Fecha_peticiones.replace(month = Mes)
 Fecha_peticiones = Fecha_peticiones.replace(year = Año)
 
 Fecha_tweets = Fecha
 Fecha_tweets = Fecha_tweets.replace(day=Dia)
+Fecha_tweets = Fecha_tweets.replace(month=Mes)
+Fecha_tweets = Fecha_tweets.replace(year=Año)
 
 
 

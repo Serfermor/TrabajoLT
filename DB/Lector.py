@@ -59,3 +59,8 @@ for i in range(len(Aux2)):
 
 # Las variables "Pol" y "Subj" contienen las medias de las correspondientes medidas
 # cada intervalo de 2horas.
+
+
+#%%
+
+a = Polari
